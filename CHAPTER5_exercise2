@@ -1,0 +1,65 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Candle a=new Candle();
+		a.setColor("Yellow");
+		a.setHeight(8);
+		System.out.println("Candle:");
+		System.out.println(a.getColor());
+		System.out.println(a.getHeight());
+		System.out.println(a.getPrice());
+		ScentCandle b=new ScentCandle();
+		b.setColor("With");
+		b.setHeight(8);
+		b.setScent("Ten");
+		System.out.println("ScentCandle");
+		System.out.println(b.getColor());
+		System.out.println(b.getHeight());
+		System.out.println(b.getPrice());
+	}
+
+}
+
+public class Candle {
+
+	private String color;
+	protected int height;
+	protected float price;
+	
+	public String getColor() {
+		return color;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+		this.price=height*2;
+	}
+	
+}
+
+
+public class ScentCandle extends Candle {
+
+	private String scent;
+	
+	public void setScent(String scent) {
+		this.scent = scent;
+	}
+	public String getScent() {
+		return scent;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+		this.price=height*3;
+	}
+	
+}
