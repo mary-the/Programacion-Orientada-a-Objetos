@@ -1,0 +1,25 @@
+package exercise1;
+
+public class FormLetterWrite {
+
+	private static String bussinessLetter="Thank tou for your recent order";
+	
+	public static void displaySalutation (String lastName) {
+	
+		System.out.println("Dear Mr. or Mrs "+lastName+bussinessLetter);
+		
+	}
+	public static void displaySalutation (String firstName,String lastName) {
+		
+		System.out.println("Dear "+firstName+" "+lastName+bussinessLetter);
+		
+	}
+	
+	public static void main(String[] args) {
+	
+		displaySalutation("Revilla ");
+		displaySalutation("MaryThe","Revilla ");
+		
+	}
+	
+}
