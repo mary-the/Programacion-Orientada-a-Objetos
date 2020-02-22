@@ -1,0 +1,24 @@
+package exercise2;
+
+public class Billing {
+
+	public static final Double TAX=0.08;
+	
+	public static Double computeBill (Double precio) {
+		return((precio*TAX)+precio);
+	}
+	
+	public static Double computeBill (Double precio,int cant) {
+		return(computeBill(precio*cant));
+	}
+	
+	public static Double computeBill (Double precio,int cant,int cup) {
+		return(computeBill(precio*cant)-cup);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(computeBill(120.50));
+		System.out.println(computeBill(120.50,2));
+		System.out.println(computeBill(120.50,2,50));
+	}
+}
