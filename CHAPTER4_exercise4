@@ -1,0 +1,57 @@
+public class BloodData {
+	private enum bType{O,A,B,AB;}
+	private enum rhFactor {RhP,RhN;}
+
+	private bType bType;
+	private rhFactor rh;
+	
+	public void setbType(bType b) {
+		this.bType=b;
+	}
+	
+	public void setRh(rhFactor rh) {
+		this.rh = rh;
+	}
+	
+	BloodData (){
+		this.bType=bType(O);
+		this.rh=RhP;
+	}
+}
+
+
+
+
+public class Patient {
+
+	public Integer ID;
+	public Integer age;
+	BloodData b=new BloodData();
+	
+	Patient (){
+		this.ID=0;
+		this.age=0;
+		b(O,RhP);
+	}
+}
+
+
+
+
+public class TestBloodData {
+public static void main(String[] args) {
+	BloodData a=new BloodData();
+	a.setbType(O);
+	a.setRh(RhP);
+}
+}
+
+
+
+public class TestPatient {
+ Patient p=new Patient();
+}
+
+
+
+
