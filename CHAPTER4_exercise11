@@ -1,0 +1,17 @@
+
+public class City {
+
+	private String cityName;
+	private int population;
+	public City (String cityName,int p) {
+		this.cityName=cityName;
+		this.population=p;
+	}
+	public void city (String cityName,int p) {
+		this.cityName=cityName;
+		this.population=p;
+	}
+	
+}
+
+
