@@ -1,0 +1,111 @@
+
+public class Bread {
+
+		private String type;
+		private int cal;
+		
+		public final static String MOTTO="The staff of life";
+		
+		public Bread (String t,int cal) {
+			this.type=t;
+			this.cal=cal;
+		}
+		
+		public void getType() {
+			System.out.println(this.type);
+		}
+		
+		public void getCal() {
+			System.out.println(this.cal);
+		}
+		
+		public void getMOTTO() {
+			System.out.println(MOTTO);
+		}
+}
+
+
+
+
+public class SandwichFilling {
+
+	private String type;
+	private int calories;
+	
+	public SandwichFilling(String t,int c){
+		this.type=t;
+		this.calories=c;
+		
+	}
+	
+	public void getType() {
+		System.out.println(this.type);
+	}
+	
+	public void getCalories() {
+		System.out.println(this.calories);
+	}
+}
+
+
+
+public class TesteBread {
+
+	
+	public static void main(String[] args) {
+		Bread a=new Bread("rye",15);
+		Bread b=new Bread("rye2",20);
+		Bread c=new Bread("rye3",30);
+		a.getType();
+		a.getCal();
+		a.getMOTTO();
+		b.getType();
+		b.getCal();
+		b.getMOTTO();
+		c.getType();
+		c.getCal();
+		c.getMOTTO();
+		
+	}
+	
+}
+
+
+
+public class TesteBread {
+
+	
+	public static void main(String[] args) {
+		Bread a=new Bread("rye",15);
+		Bread b=new Bread("rye2",20);
+		Bread c=new Bread("rye3",30);
+		a.getType();
+		a.getCal();
+		a.getMOTTO();
+		b.getType();
+		b.getCal();
+		b.getMOTTO();
+		c.getType();
+		c.getCal();
+		c.getMOTTO();
+		
+	}
+	
+}
+
+
+public class TestSandwichFilling {
+	public static void main(String[] args) {
+	
+		SandwichFilling a =new SandwichFilling("egg salad",500);
+		SandwichFilling b =new SandwichFilling("egg salad",500);
+		SandwichFilling c =new SandwichFilling("egg salad",500);
+		a.getType();
+		a.getCalories();
+		b.getType();
+		b.getCalories();
+		c.getType();
+		c.getCalories();
+	
+	}
+}
