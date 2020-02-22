@@ -1,0 +1,141 @@
+
+public class DemoTennisGames {
+	public static void main(String[] args) {
+	TennisGame uno =new TennisGame();
+	uno.setNames("Roger", "Lucas");
+	uno.setFinalScores(5, 0);
+	System.out.println(uno.getPlayer1());
+	System.out.println(uno.getFinalScore1());
+	System.out.println(uno.getFinalScore1St());
+	System.out.println(uno.getPlayer2());
+	System.out.println(uno.getFinalScore2());
+	System.out.println(uno.getFinalScore2St());
+	
+	TennisGame dos =new TennisGame();
+	dos.setNames("Roger", "Lucas");
+	dos.setFinalScores(4, 4);
+	System.out.println(dos.getPlayer1());
+	System.out.println(dos.getFinalScore1());
+	System.out.println(dos.getFinalScore1St());
+	System.out.println(dos.getPlayer2());
+	System.out.println(dos.getFinalScore2());
+	System.out.println(dos.getFinalScore2St());
+	
+	TennisGame tres=new TennisGame();
+	tres.setNames("Roger", "Lucas");
+	tres.setFinalScores(1, 4);
+	System.out.println(tres.getPlayer1());
+	System.out.println(tres.getFinalScore1());
+	System.out.println(tres.getFinalScore1St());
+	System.out.println(tres.getPlayer2());
+	System.out.println(tres.getFinalScore2());
+	System.out.println(tres.getFinalScore2St());
+	
+	DoublesTennisGame t=new DoublesTennisGame();
+	t.setNames("Roger", "Lucas","Johhny","Mark");
+	t.setFinalScores(1, 4);
+	System.out.println(t.getPlayer1());
+	System.out.println(t.getFinalScore1());
+	System.out.println(t.getFinalScore1St());
+	System.out.println(t.getPartnerP1());
+	System.out.println(t.getPlayer2());
+	System.out.println(t.getFinalScore2());
+	System.out.println(t.getFinalScore2St());
+	System.out.println(t.getPartnerP2());
+	
+	}
+}
+
+
+
+
+public class TennisGame {
+
+	protected String player1;
+	protected String player2;
+	private Integer finalScore1;
+	private Integer finalScore2;
+	private String finalScore1St;
+	private String finalScore2St;
+	public String getPlayer1() {
+		return player1;
+	}
+	public String getPlayer2() {
+		return player2;
+	}
+	public Integer getFinalScore1() {
+		return finalScore1;
+	}
+	public Integer getFinalScore2() {
+		return finalScore2;
+	}
+	public String getFinalScore1St() {
+		return finalScore1St;
+	}
+	public String getFinalScore2St() {
+		return finalScore2St;
+	}
+	
+	public void setNames(String p1,String p2) {
+		this.player1=p1;
+		this.player2=p2;
+	}
+	public void setFinalScores(Integer f1,Integer f2) {
+		this.finalScore1=f1;
+		this.finalScore2=f2;
+		this.finalScore1St=ScoresString(f1);
+		this.finalScore2St=ScoresString(f2);
+		if((this.finalScore1>4)||(this.finalScore1<0)||(this.finalScore2>4)||(this.finalScore2<0)) {
+			this.finalScore1=0;
+			this.finalScore2=0;
+			this.finalScore1St="error";
+			this.finalScore2St="error";
+		}else {
+			if((this.finalScore1==4)&&(this.finalScore2==4)) {
+				this.finalScore1=0;
+				this.finalScore2=0;
+				this.finalScore1St="error";
+				this.finalScore2St="error";	
+			}
+		}
+		
+		
+	}
+	private String ScoresString (Integer f) {
+		switch(f) {
+		case 0: return "love";
+		case 1: return "15";
+		case 2: return "30";
+		case 3: return "40";
+		case 4: return "game";
+		}
+		return " ";
+	}
+	
+	
+}
+
+
+
+
+
+
+public class DoublesTennisGame extends TennisGame{
+
+	private String partnerP1;
+	private String partnerP2;
+	 
+	public String getPartnerP1() {
+		return partnerP1;
+	}
+	public String getPartnerP2() {
+		return partnerP2;
+	}
+	public void setNames(String p1,String p2,String pp1,String pp2) {
+		this.player1=p1;
+		this.player2=p2;
+		this.partnerP1=pp1;
+		this.partnerP2=pp2;
+		
+	}
+}
