@@ -1,0 +1,44 @@
+
+public class GregorianCalendar {
+	private Integer dia;
+	private int mes;
+	private int dmes;
+	private int ann;
+	
+	public GregorianCalendar(Integer d, Integer m){
+	this.dia=d;
+	this.mes=m;		
+	}
+	
+	public void dMes() {
+	switch (mes) {
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		this.dmes=30;
+		break;
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		this.dmes=31;
+		break;
+	case 2:
+		this.dmes=28;
+		break;
+		
+	}}	
+	
+	public int diasFaltantes() {
+	return this.dmes-this.dia;	
+	}
+	
+	
+	
+
+}
+
