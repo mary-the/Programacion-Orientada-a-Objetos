@@ -1,0 +1,47 @@
+
+public class DIe {
+	private Integer value;
+	
+	public int die(){
+		this.value = ((int)(Math.random() * 100) % 6 +	1);
+		return this.value;
+	}
+}
+
+
+
+
+public class game {
+
+	public void  tiro() {
+		DIe a=new DIe();
+		DIe b=new DIe();
+		DIe c=new DIe();
+		DIe d=new DIe();
+		DIe e=new DIe();
+		System.out.println(a.die());
+		System.out.println(b.die());
+		System.out.println(c.die());
+		System.out.println(d.die());
+		System.out.println(e.die());
+	}
+}
+
+
+public class Main {
+		
+	public static void main(String[] args) {
+		game maquina=new game();
+		game tu=new game();
+		System.out.println("Tiros de la Maquina:");
+		maquina.tiro();
+		System.out.println("Tus tiros");
+		tu.tiro();
+		
+	}
+}
+
+
+
+
+
