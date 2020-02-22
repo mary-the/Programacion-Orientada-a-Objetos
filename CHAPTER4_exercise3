@@ -1,0 +1,45 @@
+package exercise3;
+
+public class BirdSighting2 {
+	 private String Specie;
+	 private Integer dayYear;
+	 private Integer numberSeen;
+	 
+	 BirdSighting2 (){
+		 BirdSighting2("robin",1,0);
+	 }
+	 
+	public BirdSighting2 (String s,int dy,int ns){
+		 this.Specie=s;
+		 this.dayYear=dy;
+		 this.numberSeen=ns;
+	 }
+	 
+	 
+}
+
+
+
+
+package exercise3;
+
+public class TestBirdSighting {
+ private String Specie;
+ private Integer dayYear;
+ private Integer numberSeen;
+
+ TestBirdSighting (){
+	 this.Specie="robin";
+	 this.dayYear=1;
+	 this.numberSeen=0;
+ }
+ 
+ public TestBirdSighting (String s,Integer dy,Integer ns){
+	 this.Specie=s;
+	 this.dayYear=dy;
+	 this.numberSeen=ns;
+ }
+ 
+  
+}
+ 
