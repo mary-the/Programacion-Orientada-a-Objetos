@@ -1,0 +1,50 @@
+
+public class Circle {
+
+	private Integer radius;
+	private Integer diameter;
+	private Float area;
+	
+	Circle(){
+		this.radius=1;
+		da();
+	}
+	
+	private void da() {
+		this.diameter=this.radius*2;
+		this.area= (float) (Math.PI * Math.pow(this.radius,2));
+	}
+	
+	public void setRadius(Integer r){
+		this.radius=r;
+		da();
+	}
+	
+	public void getRadius() {
+		System.out.println(this.radius+"  "+this.diameter+" "+this.area);
+	}
+}
+
+
+
+
+
+public class TestCircle {
+
+	public static void main(String[] args) {
+		Circle a=new Circle();
+		Circle b=new Circle();
+		Circle c=new Circle();
+		
+		a.setRadius(5);
+		b.setRadius(10);
+		
+		a.getRadius();
+		b.getRadius();
+		c.getRadius();
+		
+		
+	}
+}
+
+
