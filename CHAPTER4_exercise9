@@ -1,0 +1,47 @@
+
+public class YearEnd {
+	private Integer dia;
+	private int mes;
+	
+	public YearEnd(Integer d, Integer m){
+	this.dia=d;
+	this.mes=m;		
+	}
+	
+	public int dMes(int m) {
+	switch (m) {
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		return 30;
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		return 31;
+	case 2:
+		return 28;
+	}
+	return 0;
+	}	
+
+	public int diasFaltantes() {
+		return dMes(this.mes)-this.dia;	
+		}
+	
+	public int diasFaltantesYear() {
+		int z=0;
+		for (int i = this.mes+1; i <= 12; i++) {
+			z=z+dMes(i);
+		}
+		return z+diasFaltantes();
+	}
+	
+	
+	
+}
+
