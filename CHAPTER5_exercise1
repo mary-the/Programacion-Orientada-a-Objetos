@@ -1,0 +1,60 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		RaceHorse a =new RaceHorse();
+		a.setName("Chitaprrr");
+		a.setColor("Black");
+		a.setbYear(1995);
+		a.setRaceCompeted(10);
+		System.out.println(a.getbYear());
+		System.out.println(a.getName());
+		System.out.println(a.getColor());
+		System.out.println(a.getRaceCompeted());
+	}
+
+}
+
+class RaceHorse extends Horse{
+
+	private Integer raceCompeted;
+	
+	public Integer getRaceCompeted() {
+		return raceCompeted;
+	}
+	public void setRaceCompeted(Integer raceCompeted) {
+		this.raceCompeted = raceCompeted;
+	}
+}
+
+
+public class Horse {
+
+	private String name;
+	private String color;
+	private int bYear;
+	
+	public int getbYear() {
+		return bYear;
+	}
+	public String getColor() {
+		return color;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setbYear(int bYear) {
+		this.bYear = bYear;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+	
+}
+
