@@ -1,0 +1,54 @@
+
+public class UseCourse {
+
+	CollegeeCourse a=new CollegeeCourse("BIO",546,35);
+	a.display();
+
+}
+
+
+
+
+public class LabCourse extends CollegeeCourse{
+
+	public LabCourse(String d,int n, int c) {
+		super(d,n,c);		
+		this.Fee=this.Fee+50;
+	}
+	
+	public void display() {
+		System.out.println("It´s a LabCourse.");
+		super.display();
+		
+	}
+	
+}
+
+
+
+
+
+public class CollegeeCourse {
+	protected String department;
+	protected int number;
+	protected int credits;
+	protected float Fee;
+	
+	public CollegeeCourse(String d,int n, int c) {
+		this.department=d;
+		this.number=n;
+		this.credits=c;
+		this.Fee=120*c;
+		
+	}
+	
+	public void display() {		
+		System.out.println("Department;"+this.department);
+		System.out.println("Course number:"+this.number);
+		System.out.println("Course credits:"+this.credits);
+		System.out.println("Course Fee"+this.Fee);
+	}
+}
+
+
+
