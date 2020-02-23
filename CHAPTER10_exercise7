@@ -1,0 +1,65 @@
+
+public class UseCarRental {
+
+	public static void main(String[] args) {
+		CarRental a=new CarRental("Tico",5611,"fullsize",20);
+		a.display();
+	}
+}
+
+
+
+
+public class LuxuryCarRental extends CarRental{
+
+	public LuxuryCarRental (String rn,int zc,String sc,int rd) {
+	super(rn,zc,sc,rd);
+	this.dailyFee=(float)79.99;
+	this.totalRentalFee=dailyFee*rentalDays;
+	}
+	
+	public void display() {
+		super.display();
+		
+	}
+	
+	
+}
+
+
+public class CarRental {
+
+	private String rentersName;
+	private int zipCode;
+	private String sizeCar;
+	protected int rentalDays;
+	protected float dailyFee;
+	protected float totalRentalFee;
+	
+	public CarRental(String rn,int zc,String sc,int rd) {
+		this.rentersName=rn;
+		this.zipCode=zc;
+		this.sizeCar=sc;
+		this.rentalDays=rd;
+		switch(sc) {
+		case "economy":this.dailyFee=(float)29.99;
+		break;
+		case "midsize":this.dailyFee=(float)38.99;
+		break;
+		case "fullsize":this.dailyFee=(float)43.50;
+		break;
+		}
+		this.totalRentalFee=this.dailyFee*this.rentalDays;
+	
+	}
+	
+	public void display() {
+		System.out.println("Renters Name"+this.rentersName);
+		System.out.println("zipCode:"+this.zipCode);
+		System.out.println("sizeCar:"+this.sizeCar);
+		System.out.println("rentalDays:"+this.rentalDays);
+		System.out.println("Daily Fee:"+this.dailyFee);
+		System.out.println("Total Rental Fee:"+this.totalRentalFee);
+	}
+	
+}
