@@ -1,0 +1,78 @@
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Package a=new Package(5,'T');
+		a.display();
+	}
+}
+
+
+public class InsuredPackage extends Package{
+
+	public InsuredPackage(int w,char sM) {
+		super(w,sM);
+	}
+	public void insured(float i) {
+		if((i>=0)&&(i<=1)) {
+			this.shippingC=(float) (this.shippingC+2.45);
+		}else {
+			if((i>=1.01)&&(i<=3.0)) {
+				this.shippingC=(float) (this.shippingC+3.95);
+			}else {
+				this.shippingC=(float) (this.shippingC+5.55);
+			}
+		}
+	}
+}
+
+
+
+public class Package {
+	private int weightOz;
+	private char sM;
+	protected float shippingC;
+	
+	public Package (int w,char sM) {
+		this.weightOz=w;
+		this.sM=sM;
+		this.shippingC=calculateCost();
+	}
+	
+	private float calculateCost() {
+		if((weightOz>=1)&&(weightOz<=8)) {
+			switch(sM) {
+			case 'A':return 2;
+			case 'T':return (float)1.50;
+			case 'M':return (float)0.50;
+			}
+			}else{
+				if((weightOz>=9)&&(weightOz<=16)) {			
+					switch(sM) {
+					case 'A':return 3;
+					case 'T':return (float)2.35;
+					case 'M':return (float)1.50;
+					}
+				}else {
+					switch(sM) {
+					case 'A':return (float)4.50;
+					case 'T':return (float)3.25;
+					case 'M':return (float)2.15;
+					}
+				}
+				
+			}
+	return 0;	
+	}
+	
+	public void display() {
+		System.out.println("weightOz:"+this.weightOz);
+		System.out.println("shipper Method:"+this.sM);
+		System.out.println("shipper Cost:"+this.shippingC);
+		System.out.println("Cost:"+this.shippingC);
+	}
+	
+	
+}
+
