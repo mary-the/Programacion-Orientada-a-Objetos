@@ -1,0 +1,53 @@
+
+public class UseVehicle {
+
+	public static void main(String[] args) {
+		MotorCycle Harley=new MotorCycle(100);
+		System.out.println(Harley.toString());	
+		Car jeep=new Car(100);
+		System.out.println(jeep.toString());	
+	}
+
+}
+
+
+
+public class Vehicle {
+	public int wheels;
+	public int mpg;
+	
+	public Vehicle(int w, int mpg) {
+		this.wheels=w;
+		this.mpg=mpg;
+		
+	}
+	
+	public String toString() {
+		return "wheels:"+this.wheels+"    mpg:"+this.mpg; 
+	}
+	
+	
+
+}
+
+
+
+public class MotorCycle extends Vehicle{
+
+	public MotorCycle(int pmg) {
+		super(4,pmg);
+	}
+
+}
+
+
+
+public class Car extends Vehicle{
+
+	public Car(int pmg) {
+		super(2,pmg);
+	}
+
+}
+
+
