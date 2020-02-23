@@ -1,0 +1,85 @@
+
+public class Alien {
+
+	protected String eyesColor;
+	protected int eyesNumber;
+	protected String lenguage;
+	
+	public Alien(String eyesColor,int eyeNumber,String lenguage) {
+		this.eyesColor=eyesColor;
+		this.eyesNumber=eyeNumber;
+		this.lenguage=lenguage;
+	}
+	
+	public String toString () {
+		return "Eyes color:"+this.eyesColor+"    Eyes Number:"+this.eyesNumber+"      Lenguage:"+this.lenguage;
+	}
+	
+	
+}
+
+public class Martian extends Alien {
+
+	Martian(){
+		super("Blue",4,"Martianese");
+	}
+	
+}
+
+
+
+public class Jupiterian extends Alien{
+
+	Jupiterian(){
+		super("Green",3,"Jupiterianese");
+	}
+}
+
+
+
+
+
+public class CreateAliens {
+
+	
+	public static void main(String[] args) {
+		Martian mark =new Martian();
+		Jupiterian Johnny=new Jupiterian();
+		mark.toString();
+		Johnny.toString();
+	
+	}
+}
+
+
+
+
+
+
+
+
+public class Die {
+		protected Integer value;
+		
+		public int die(){
+			this.value = ((int)(Math.random() * 100) % 6 +	1);
+			return this.value;
+		}
+}
+
+
+
+
+
+
+
+
+public class Die {
+		protected Integer value;
+		
+		public int die(){
+			this.value = ((int)(Math.random() * 100) % 6 +	1);
+			return this.value;
+		}
+}
+
