@@ -1,0 +1,56 @@
+
+public class Main {
+	public static void main(String[] args) {
+		CabinRental casa1=new CabinRental(14);
+		System.out.println("CabinRental:");
+		System.out.println(casa1.getCabinNumber());
+		System.out.println(casa1.getRentalRate());
+		HolidayCabinRental casa2=new HolidayCabinRental(14,5);
+		System.out.println(casa2.getCabinNumber());
+		System.out.println(casa2.getRentalRate());
+		System.out.println(casa2.getRoom());
+	}
+}
+
+
+
+
+public class CabinRental {
+	protected Integer CabinNumber;
+	protected Double wRentalRate;
+	public Integer getCabinNumber() {
+		return CabinNumber;
+	}
+	public Double getRentalRate() {
+		return wRentalRate;
+	}
+	public CabinRental(Integer cn) {
+		this.CabinNumber=cn;
+		if(cn<4) {
+			this.wRentalRate=(double) 950;
+		}else {
+			this.wRentalRate=(double) 1100;
+		}
+		
+		
+		
+		
+	}
+}
+
+
+
+public class HolidayCabinRental extends CabinRental{
+private int room;
+
+	public int getRoom() {
+		return room;
+	}
+	public HolidayCabinRental(Integer cn,int room) {
+		super(cn);
+		this.room=room;
+		this.wRentalRate=this.wRentalRate+150;
+	}
+	
+}
+
